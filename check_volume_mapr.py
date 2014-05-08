@@ -72,7 +72,10 @@ for line in p.stdout.readlines():
 
 		o = subprocess.Popen(cmd, shell=True, stdout=PIPE, bufsize=1)
 		o.stdout.close()
-	  	o.wait()	
+	  	o.wait()
+	  	
+''' Do math to publish aggregate number in either GB or TB to gangila '''
+
 aggregate = aggregate/1024
 if number > 1024:
 	aggregate = aggregate/1024
